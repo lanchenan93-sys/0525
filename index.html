@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台北市即時雨量互動地圖</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    /* 讓地圖填滿整個螢幕，放在最底層 */
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+    /* 讓 p5.js 建立的 UI 元素浮在地圖上層 */
+    .p5-ui {
+      position: absolute;
+      z-index: 999; 
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="map"></div>
+  
+  <script src="sketch.js"></script>
+  
+</body>
+</html>
